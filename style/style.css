@@ -208,7 +208,7 @@ a { text-decoration: none; }
     right: 20px; }
 
 /*--- Media Queries */    
-@media (min-width: 700px) {
+@media (max-device-width: 700px) {
   .header {
     position: relative;
     height: 200px;
