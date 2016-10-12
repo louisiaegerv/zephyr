@@ -1,0 +1,203 @@
+html, body, * {
+  font-family: 'Raleway', sans-serif;
+  padding: 0;
+  margin: 0;
+  }
+
+body {
+  text-transform: uppercase; }
+
+a { text-decoration: none; }
+
+
+
+/* --- Hover Effects --- */
+/* --------------------- */
+
+.underline {
+  text-decoration: none;
+  position: relative;
+  border-bottom: 1px solid transparent;
+  transition: .5s; }
+  .underline:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+  }
+  .underline:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);}
+
+/* Shutter Out Horizontal */
+.shutter-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background: #333;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  animation-fill-mode: backwards; }
+  .shutter-out:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #52CCCF;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; }
+    .shutter-out:hover, .shutter-out:focus, .shutter-out:active {
+      color: #FFF; }
+      .shutter-out:hover:before, .shutter-out:focus:before, .shutter-out:active:before {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1); }
+
+/* --- Buttons --- */
+/* --------------- */
+
+.btn-main {
+  color: #FFF;
+  background-color: #333;
+  padding: 10px 20px;
+  transition: all .5s; }
+  .btn-main:hover {
+    color: #333;
+    background-color: #fff;
+    filter: drop-shadow(4px 4px 4px #333);
+    /*box-shadow: 4px 4px 4px #333;*/
+    transition: .3s; }
+.btn-secondary {
+  color: #333;
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #333;
+  padding: 10px 20px;
+  transition: all .5s; }
+  .btn-secondary:hover {
+    color: #FFF;
+    background: #333;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    filter: drop-shadow(4px 4px 4px rgba(0,0,0,.5)); }
+
+.container {
+  background: green;
+  position: relative;
+  margin: 0 auto; }
+
+/*--- Body Styles ---*/
+
+#header {
+  background: #333;
+  color: #FFF;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  z-index: 1; }
+  #header ul {
+    padding: 15px 0px }
+    #header li {
+      display: inline-block;
+      color: #FFF;
+      padding: 0px 0px 1px 0;
+      margin: 0px 8px;
+      font-size: 12px; }
+
+#jumbotron {
+  position: relative;
+  height: 94vh;
+  background: url("../assets/zephyr.jpg") no-repeat center fixed;
+  filter: grayscale(60%);
+  -webkit-background-size: cover;
+  background-size: cover; }
+  .jumboContainer {
+    position: fixed;
+    height: 100%;
+    padding: 10vh 30px 0 50px; }
+    .jumboContainer h1 {
+      font-weight: 400;
+      font-size: 5vw; }
+    .jumboContainer a {
+      position: relative;
+      color: #FFF;
+      font-weight: 600;
+      padding: 10px 30px;
+      top: 20px;
+      background: #333; }
+
+#content {
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 2000px;
+  text-align: center; 
+  padding: 60px 10px 10px 10px;
+  height: 100% }    
+  #content .col {
+    width: 32%;
+    height: 200px;
+    padding: 0 0 80px 0;
+    display: inline-block; }
+    #content img {
+      height: 32px;
+      padding: 10px 0; }
+    #content h2 {
+      padding: 10px 0; }
+    #content p {
+      text-transform: none;
+      padding: 10px 0 40px; }
+
+
+#footer {
+  //background-color: #333;
+  color: #FFF;
+  font-size: 11px;
+  position: relative;
+  background: url("../assets/zephyr.jpg") no-repeat center fixed;
+  filter: grayscale(60%);
+  -webkit-background-size: cover;
+  background-size: cover;
+  text-transform: none; }
+  #footer .copyright {
+    width: 20%;
+    padding: 30px 0 20px 30px; }
+  #footer .creator {
+    position: absolute;
+    top: 30px;
+    right: 20px; }
+
+/*--- Media Queries */    
+@media (max-width: 500px) {
+  .jumboContainer h1{
+    font-size: 10vw;
+    transition: .5s; }
+  #content .col {
+    width: 100%; }
+}
