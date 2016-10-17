@@ -5,6 +5,6 @@ Zephyr: a soft, gentle breeze
 
 
 ======
-[Click here](https://louisiaegerv.github.io/zephyr/) to view a demo of the site.
+[Click here](https://louisiaegerv.github.io/zephyr/) to view a demo of Zephyr.
 ------
 [<img src="https://raw.githubusercontent.com/louisiaegerv/zephyr/master/assets/ZephyrSite.jpg">](https://louisiaegerv.github.io/zephyr/)
