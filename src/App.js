@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
 import './App.css';
 import '../style/style.css';
 
@@ -7,15 +9,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">        
-
-       <div id="header">
-          <ul>
-            <a href="#"><li className="li underline">About</li></a>
-            <a href="#"><li className="li underline">Work</li></a>
-            <a href="#"><li className="li underline">Team</li></a>
-            <a href="#"><li className="li underline">Contact</li></a>
-          </ul>
-        </div>
+       
+       <Header />  
        
         <div id="jumbotron" className="container">
           <h1>We are Zephyr</h1>
@@ -46,15 +41,8 @@ class App extends Component {
             <a href="" className="btn-secondary">Learn More</a>
           </div>
         </div>
-
-        <div id="footer" className="container">
-          <div className="copyright">
-            <p>© ZEPHYR 2016</p>
-          </div>
-          <div className="creator">
-            <pre>Coded with   ♥    by Louis Iaeger V</pre>
-          </div>
-        </div>
+        
+        <Footer />
     </div>
     );
   }
